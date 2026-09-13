@@ -100,3 +100,8 @@ h1 em{background:linear-gradient(105deg,#fff4c6 8%,#e8ba3a 46%,#b9891d 78%,#f1d6
 .client-copy{padding:1.65rem}.client-copy>span{display:block;color:var(--gold-deep);font-size:.7rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;margin-bottom:.7rem}.client-copy h3{font-size:1.38rem;margin-bottom:.8rem}.client-copy p{color:var(--muted);font-size:.9rem;line-height:1.7;margin:0}
 @media(max-width:1000px){.client-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.client-grid{grid-template-columns:1fr}.client-card{grid-template-rows:180px 1fr;min-height:390px}}
+
+/* Display footer cards side by side */
+.site-footer .footer-main {
+  display: grid;
+}
