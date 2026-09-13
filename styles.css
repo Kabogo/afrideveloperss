@@ -233,3 +233,89 @@ h1 em{background:linear-gradient(105deg,#fff4c6 8%,#e8ba3a 46%,#b9891d 78%,#f1d6
     padding: 1rem;
   }
 }
+
+/* Prevent horizontal page scrolling */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@supports (overflow: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}
+
+/* Keep cards inside their containers */
+.service-grid,
+.product-grid,
+.pricing-grid,
+.client-grid,
+.care-options,
+.site-footer .footer-main {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.service-grid > *,
+.product-grid > *,
+.pricing-grid > *,
+.client-grid > *,
+.care-options > *,
+.site-footer .footer-main > * {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+/* Phone and tablet layouts */
+@media (max-width: 760px) {
+  .service-grid,
+  .product-grid,
+  .pricing-grid,
+  .client-grid,
+  .care-options,
+  .site-footer .footer-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero,
+  .approach,
+  .care-pricing {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero > *,
+  .approach > *,
+  .care-pricing > *,
+  .price-row > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .site-footer .footer-main > * {
+    grid-column: auto;
+  }
+
+  .price-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow-wrap: anywhere;
+  }
+
+  .browser-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .service-grid article:hover,
+  .product-card:hover,
+  .pricing-card:hover,
+  .client-card:hover,
+  .site-footer .footer-main > *:hover {
+    transform: none;
+  }
+}
