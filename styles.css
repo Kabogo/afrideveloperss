@@ -169,3 +169,67 @@ h1 em{background:linear-gradient(105deg,#fff4c6 8%,#e8ba3a 46%,#b9891d 78%,#f1d6
     gap: 0.75rem;
   }
 }
+@media (max-width: 760px) {
+  .section {
+    padding: 2.5rem 12px;
+  }
+
+  .service-grid,
+  .product-grid,
+  .pricing-grid,
+  .client-grid,
+  .care-options,
+  .site-footer .footer-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    gap: 12px;
+  }
+
+  .service-grid > *,
+  .product-grid > *,
+  .pricing-grid > *,
+  .client-grid > *,
+  .care-options > *,
+  .site-footer .footer-main > * {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .services .service-grid article,
+  .pricing-card,
+  .client-card,
+  .product-copy {
+    min-height: 0;
+    height: auto;
+  }
+
+  .services .service-grid p,
+  .services .service-grid h3,
+  .pricing-card > p {
+    min-height: 0;
+  }
+
+  .service-grid .icon {
+    margin: 1.25rem 0;
+  }
+
+  .product-copy,
+  .client-copy,
+  .pricing-card {
+    padding: 1rem;
+  }
+
+  .site-footer .footer-main {
+    padding: 1.5rem 12px;
+  }
+
+  .site-footer .footer-main > .footer-brand,
+  .site-footer .footer-main > .footer-column {
+    grid-column: auto;
+    padding: 1rem;
+  }
+}
